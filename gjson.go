@@ -1880,6 +1880,7 @@ type parseContext struct {
 // If you are consuming JSON from an unpredictable source then you may want to
 // use the Valid function first.
 func Get(json, path string) Result {
+	// 解析 path
 	if len(path) > 1 {
 		if (path[0] == '@' && !DisableModifiers) || path[0] == '!' {
 			// possible modifier
